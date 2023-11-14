@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+cors:
+  allowed:
+  - localhost:8081
+  - 127.0.0.1:8081
+
+jwt:
+  secret: some_random_secret
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+  datasource:
+    url: jdbc:postgresql://${DB_HOST}:5432/cloudfs_db
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
